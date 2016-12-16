@@ -27,6 +27,7 @@ class AdminController extends Controller {
         ]);
         $product = new Product;
         $product->name = $request->name;
+        $product->short = $request->short;
         $product->description = $request->description;
         $product->save();
         return redirect()->route('admin');

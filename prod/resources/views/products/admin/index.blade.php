@@ -27,7 +27,7 @@
                         <div>{{ $item->updated_at }}</div>
                     </td>
                     <td>
-                        <form action="/admin/product/{{ $item->id }}" method="POST">
+                        <form action="{{route('destroy',['product'=>$item->id])}}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
 
